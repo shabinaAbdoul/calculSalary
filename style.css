@@ -1,0 +1,21 @@
+.bgclr
+{
+    background-color: rgb(85,165,220);
+    text-align:center;
+    padding:30px;    
+}
+.bgclr p{
+    color:white;
+    font-size: 20px;
+}
+.aln
+{
+ justify-content: center;
+}
+.sec,footer{
+    padding:15px;
+}
+.msg
+{
+    font-weight: bold;
+}

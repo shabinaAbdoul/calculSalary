@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULER LE SALAIRE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container bgclr">
+        <p>Calculer et convertir vote salaire brut en salaire net</p>        
+        <table class="table caption-top">            
+            <tbody>
+              <tr>                
+                <th>Salaire</th>
+                <th>Brut</th>
+                <th>Net</th>
+              </tr>
+              <tr>                
+                <th>Annuel</th>
+                <td><input type="number" placeholder="0€" id="brutans"></td>
+                <td><input type="number" placeholder="0€" id="netans"></td>
+              </tr>
+              <tr>                
+                <th>Mensuel</th>
+                <td><input type="number" placeholder="0€" id="brutmen"></td>
+                <td><input type="number" placeholder="0€" id="netmen"></td>
+              </tr>
+              <tr>                
+                <th>Journalier</th>
+                <td><input type="number" placeholder="0€" id="brutjour"></td>
+                <td><input type="number" placeholder="0€" id="netjour"></td>
+              </tr>
+              <tr>                
+                <th>Horaires</th>
+                <td><input type="number" placeholder="0€" id="bruthor"></td>
+                <td><input type="number" placeholder="0€" id="nethor"></td>
+              </tr>              
+            </tbody>
+            
+          </table>
+          <div class="sec">
+          <div class="row">
+              <div class="col col-lg-2"> <b>Options</b></div>
+              <div class="col"><button onclick="smic();">Appliquer le SMIC</button></div>
+              <div class="col"><button id="taux">Taux%: <span class="txt"></span></button></div>
+              <div class="col"><button>Mois: <span class="txt"></span></button></div>
+              <div class="col"><button>Heures: <span class="txt"></span></button></div>
+          </div><br>
+          <div class="row">
+              <div class="col col-lg-2"> <b> Statut </b></div>
+              <div class="col"><button>Cadre: <input type="radio" name="status" value="25.5" onclick="rbtn();"> </button></div>
+              <div class="col"><button>Fonctionnaire: <input type="radio" name="status" value="1" onclick="rbtn();"></button></div>
+              <div class="col"><button>Portage: <input type="radio" name="status" value="50" onclick="rbtn();"></button></div>
+              <div class="col"><button>Indépendant/Société: <input type="radio" name="status" value="45" onclick="rbtn();"></button></div>
+              <div class="col"><button>Auto-Entrepreneur: <input type="radio" name="status" value="25" onclick="rbtn();"></button></div>
+          </div>
+          <br>
+        </div>
+          <footer>
+          <p class="text-dark ftext">Cliquez sur n'importe quel nombre pour calculer votre salaire.</p>
+          <p class="text-dark ftext msghd">Vous gagner un salaire net mensuel de <span class="msg"></span>€ ce qui représente un salaire brut mensuel de <span class="msg"></span>€. </p>
+          <p class="text-dark ftext msghd">Si le taux de charges est <span class="msg"></span>%, la différence entre le brut et le net sera de <u><span class="msg"></span></u>€ chaque mois.</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
